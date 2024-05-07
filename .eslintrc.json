@@ -1,0 +1,20 @@
+{
+  "extends":[ "@rocketseat/eslint-config/react", "plugin:react-hooks/recommended"],
+  "plugins": ["eslint-plugin-import-helpers"],
+    "rules": {
+        "import-helpers/order-imports": [
+            "warn",
+            {
+                "newlinesBetween": "ignore",
+                "groups": [
+                    "/^zod/",
+                    "/^react/",
+                    "module",
+                    "/^@shared/",
+                    ["parent", "sibling", "index"]
+                ],
+                "alphabetize": { "order": "asc", "ignoreCase": true }
+            }
+        ]
+    }
+}
